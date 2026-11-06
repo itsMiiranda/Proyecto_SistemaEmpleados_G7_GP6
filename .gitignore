@@ -1,0 +1,7 @@
+# Archivos temporales y de compilación de NetBeans / Maven
+/build/
+/target/
+/nbproject/private/
+/dist/
+.DS_Store
+Thumbs.db
