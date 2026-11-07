@@ -13,11 +13,16 @@ public class ConexionMongo {
 
     public static MongoDatabase getConexion() {
         if (database == null) {
+        try {
             MongoClient mongoClient = MongoClients.create(URI);
-            database = mongoClient.getDatabase(DATABASE);
-            database.runCommand(new org.bson.Document("ping", 1)); // falla si no hay servidor
+            MongoDatabase db = mongoClient.getDatabase(DATABASE);
+            db.runCommand(new org.bson.Document("ping", 1));//Falla si no hay servidor
+            database = db;
             System.out.println("Conexion exitosa a MongoDB");
+        } catch (Exception e) {
+            throw new IllegalStateException("No se pudo conectar a MongoDB. Verifique que el servicio este en ejecucion.", e);
         }
-        return database;
+    }
+    return database;
     }
 }

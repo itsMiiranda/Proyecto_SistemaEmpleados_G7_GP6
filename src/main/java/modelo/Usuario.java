@@ -10,18 +10,12 @@ public class Usuario {
     private ObjectId id;
     private String usuario;
     private String password; // aquí guardamos el hash, y no la contraseña en texto plano
-    private String nombre;
+    private String rol;
+    private boolean activo;
 
     public Usuario() {
     }
 
-    public Usuario(String usuario, String password, String nombre) {
-        this.usuario = usuario;
-        this.password = password;
-        this.nombre = nombre;
-    }
-
-    //Getters y Setters
     public ObjectId getId() {
         return id;
     }
@@ -46,12 +40,20 @@ public class Usuario {
         this.password = password;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getRol() {
+        return rol;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
     
     
