@@ -4,7 +4,7 @@ import org.bson.types.ObjectId;
 
 /**
  *
- * @author MINEDUCYT
+ * @author G7_GP6
  */
 public class Usuario {
     private ObjectId id;
