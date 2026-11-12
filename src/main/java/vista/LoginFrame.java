@@ -133,8 +133,11 @@ public class LoginFrame extends JFrame {
             // Cerramos el login
             this.dispose();
 
-            // Aquí se abrirá el menú principal
-            // new MenuPrincipal().setVisible(true);
+            // Abrimos el menú principal
+           new MenuPrincipal().setVisible(true);
+
+           // Cerramos la ventana de inicio de sesión
+           this.dispose();
 
         } else {
 
