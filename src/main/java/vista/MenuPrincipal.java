@@ -4,6 +4,11 @@ package vista;
 import javax.swing.*;
 import java.awt.*; 
 
+/**
+ *
+ * @author G7_GP6
+ */
+
 public class MenuPrincipal extends JFrame {
 
   // Constructor del menu principal 
