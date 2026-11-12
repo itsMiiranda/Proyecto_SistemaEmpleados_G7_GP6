@@ -1,5 +1,10 @@
 package util;
 
+/**
+ *
+ * @author G7_GP6
+ */
+
 public class Validador {
 
   // Verifica que el campo no este vacio
