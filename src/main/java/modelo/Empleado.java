@@ -106,7 +106,7 @@ public abstract class Empleado {
     
     // Nombre completo (útil para mostrar en tablas)
     public String getNombreCompleto() {
-        return nombre + " " + apellido;
+        return ((nombre == null ? "" : nombre) + " " + (apellido == null ? "" : apellido)).trim();
     }  
     
     // Método abstracto → cada hijo lo implementa de forma distinta

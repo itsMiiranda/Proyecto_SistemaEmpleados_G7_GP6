@@ -26,6 +26,23 @@ public class EmpleadoPorComision extends Empleado {
         this.montoVentas = montoVentas;
     }
 
+    //Getters y Setters
+    public double getPorcentajeComision() {
+        return porcentajeComision;
+    }
+
+    public void setPorcentajeComision(double porcentajeComision) {
+        this.porcentajeComision = porcentajeComision;
+    }
+
+    public double getMontoVentas() {
+        return montoVentas;
+    }
+
+    public void setMontoVentas(double montoVentas) {
+        this.montoVentas = montoVentas;
+    }
+
      // Calcula la remuneración de un empleado por comisión
     @Override
     public double calcularRemuneracion() {
