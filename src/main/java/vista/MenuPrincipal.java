@@ -16,12 +16,12 @@ public class MenuPrincipal extends JFrame {
 
     //Configuracion de la ventana 
     setTitle("Sistema de Administracion de Empleados");
-    setSiza(500, 400);
+    setSize(500, 400);
     setLocationRelativeTo(null);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     //Titulo que aparecera en la parte superior 
-    Jlabel titulo = new JLabel("MENÚ PRINCIPAL", SwingConstants.CENTER);
+    JLabel titulo = new JLabel("MENÚ PRINCIPAL", SwingConstants.CENTER);
     titulo.setFont(new Font("Arial", Font.BOLD, 22));
 
     //Creamos los botones del menu
