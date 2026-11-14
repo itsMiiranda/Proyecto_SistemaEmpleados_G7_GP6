@@ -26,7 +26,7 @@ public class MenuPrincipal extends JFrame {
 
     //Creamos los botones del menu
     JButton btnEmpleados = new JButton("Administrar empleados");
-    JButton btnRemuneraciones = new JButton("Calcular remunaciones");
+    JButton btnRemuneraciones = new JButton("Calcular remuneraciones");
     JButton btnConsultas = new JButton("Consultar empleados"); 
     JButton btnReportes = new JButton("Generar reportes"); 
     JButton btnCerrar = new JButton("Cerrar sesión");
