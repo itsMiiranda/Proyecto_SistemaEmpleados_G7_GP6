@@ -1,3 +1,4 @@
+
 package vista;
 
 import java.awt.Color;
@@ -47,10 +48,23 @@ public class MenuPrincipal extends JFrame {
         btnEmpleados.addActionListener(e -> abrir("empleados"));
         btnCalculos.addActionListener(e -> abrir("calculos"));
         btnReportes.addActionListener(e -> abrir("reportes"));
+
+        // Pregunta antes de cerrar la sesión y regresar al inicio de sesión.
         btnSesion.addActionListener(e -> {
-            dispose();
-            new LoginFrame().setVisible(true);
+            int opcion = JOptionPane.showConfirmDialog(
+                    this,
+                    "¿Desea cerrar sesión?",
+                    "Cerrar sesión",
+                    JOptionPane.YES_NO_OPTION
+            );
+
+            if (opcion == JOptionPane.YES_OPTION) {
+                dispose();
+                new LoginFrame().setVisible(true);
+            }
         });
+
+        // Finaliza el programa.
         btnSalir.addActionListener(e -> System.exit(0));
 
         botones.add(btnEmpleados);
@@ -58,21 +72,23 @@ public class MenuPrincipal extends JFrame {
         botones.add(btnReportes);
         botones.add(btnSesion);
         botones.add(btnSalir);
-        raiz.add(botones, java.awt.BorderLayout.CENTER);
 
+        raiz.add(botones, java.awt.BorderLayout.CENTER);
         setContentPane(raiz);
     }
 
+    // Crea los botones del menú.
     private JButton crearBoton(String texto) {
         JButton b = new JButton(texto);
         b.setPreferredSize(new Dimension(300, 36));
         return b;
     }
 
-    /** Abre una pantalla; si MongoDB no responde muestra el error en vez de cerrarse. */
+    // Abre la pantalla seleccionada.
     private void abrir(String pantalla) {
         try {
             JFrame ventana;
+
             switch (pantalla) {
                 case "empleados":
                     ventana = new EmpleadosFrame();
@@ -84,11 +100,17 @@ public class MenuPrincipal extends JFrame {
                     ventana = new ReportesFrame();
                     break;
             }
+
             ventana.setVisible(true);
+
         } catch (RuntimeException ex) {
-            JOptionPane.showMessageDialog(this,
+            JOptionPane.showMessageDialog(
+                    this,
                     "No se pudo abrir la pantalla.\n" + ex.getMessage(),
-                    "Error de conexión", JOptionPane.ERROR_MESSAGE);
+                    "Error de conexión",
+                    JOptionPane.ERROR_MESSAGE
+            );
         }
     }
 }
+
