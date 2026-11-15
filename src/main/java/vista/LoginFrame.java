@@ -134,7 +134,7 @@ public class LoginFrame extends JFrame {
             this.dispose();
 
             // Aquí se abrirá el menú principal
-            // new MenuPrincipal().setVisible(true);
+            new MenuPrincipal().setVisible(true);
 
         } else {
 

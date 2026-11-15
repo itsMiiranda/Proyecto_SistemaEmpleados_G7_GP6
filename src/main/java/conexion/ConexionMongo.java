@@ -26,3 +26,4 @@ public class ConexionMongo {
     return database;
     }
 }
+
