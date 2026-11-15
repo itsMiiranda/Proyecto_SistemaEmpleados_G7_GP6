@@ -1,8 +1,7 @@
 
 package util;
 
-/**
- *
+/*
  * @author G7_GP6
  */
 
