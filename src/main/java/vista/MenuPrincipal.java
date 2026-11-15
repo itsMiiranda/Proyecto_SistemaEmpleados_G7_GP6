@@ -4,8 +4,7 @@ package vista;
 import javax.swing.*;
 import java.awt.*; 
 
-/**
- *
+/*
  * @author G7_GP6
  */
 
